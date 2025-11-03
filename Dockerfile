@@ -4,6 +4,9 @@ FROM node:22-slim AS builder
 # 设置工作目录
 WORKDIR /app
 
+# 设置淘宝镜像源
+RUN npm config set registry https://registry.npmmirror.com
+
 # 复制 package.json 和 package-lock.json（如果存在）
 COPY package*.json ./
 
@@ -22,6 +25,9 @@ FROM node:22-slim
 
 # 设置工作目录
 WORKDIR /app
+
+# 设置淘宝镜像源
+RUN npm config set registry https://registry.npmmirror.com
 
 # 复制 package.json 和 package-lock.json（如果存在）
 COPY package*.json ./
