@@ -1,0 +1,25 @@
+{
+  "name": "ast-client-test",
+  "version": "1.0.0",
+  "description": "AST client test application",
+  "main": "dist/ast_client.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/ast_client.js",
+    "dev": "ts-node src/ast_client.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^9.0.1",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/uuid": "^9.0.7",
+    "@types/ws": "^8.5.10",
+    "typescript": "^5.3.3"
+  }
+}
+
