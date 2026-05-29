@@ -3,3 +3,4 @@ dist/
 *.tsbuildinfo
 .env
 .env.*
+ast-client-test-v1.tar

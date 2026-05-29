@@ -11,7 +11,7 @@ RUN npm config set registry https://registry.npmmirror.com
 COPY package*.json ./
 
 # 安装依赖
-RUN npm ci --only=production=false
+RUN npm ci
 
 # 复制源代码
 COPY tsconfig.json ./
@@ -33,7 +33,7 @@ RUN npm config set registry https://registry.npmmirror.com
 COPY package*.json ./
 
 # 只安装生产依赖
-RUN npm ci --only=production && npm cache clean --force
+RUN npm ci --omit=dev && npm cache clean --force
 
 # 从构建阶段复制编译后的文件
 COPY --from=builder /app/dist ./dist
